@@ -26,10 +26,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req,res) => {
-	db.select('*').from('users')
+	res.send('it is working!');
+	/*db.select('*').from('users')
 	.then(data => {
 		res.json(data);
-	});
+	});*/
 });
 
 app.post('/signin', (req,res) => { signin.handleSignin(req,res,db,bcrypt)});
