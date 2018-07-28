@@ -15,7 +15,8 @@ const handleSignin = (req,res, db, bcrypt) => {
 		} else {
 			res.status(400).json('cannot log in');
 		}
-	});
+	})
+	.catch(err => res.json(err));
 };
 
 module.exports = {
