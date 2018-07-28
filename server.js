@@ -39,8 +39,8 @@ app.get('/profile/:id', (req, res) => { profile.handleProfile(req,res,db, bcrypt
 app.put('/image', (req,res) => { image.handleImage(req,res,db)});
 app.post('/imageurl', (req,res) => { image.handleAPICall(req,res)});
 
-app.listen(process.env.port || 3000, () => {
-	console.log(`app is running on port ${process.env.port}`);
+app.listen(process.env.PORT || 3000, () => {
+	console.log(`app is running on port ${process.env.PORT}`);
 });
 
 
